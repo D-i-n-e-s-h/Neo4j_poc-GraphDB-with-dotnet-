@@ -14,6 +14,27 @@ These are the components of our Web Application:
 
 Provision a database quickly with https://sandbox.neo4j.com/?usecase=movies[Neo4j Sandbox] or https://neo4j.com/cloud/aura/[Neo4j Aura].
 
+== Required
+* java 11
+* neo4j 4.4
+* dotnet core 3.0 or more
+
+== Steps
+----
+  run server
+      cd D:\neo4j-community-4.4.3\bin
+      neo4j console 
+        or
+      neo4j install-service -> it will create neo4j as apache Daemon windows service locally
+      neo4j start
+      http://localhost:7474/browser/
+      neo4j stop
+  use local neo4j db in dotnet core poc:
+      create new db in neo4j and create new node and relationship
+      get the server where database hosted -> :sysinfo
+      then use the address like this neo4j://localhost:7687 in launchsettings.json and change username and pwd
+----
+ 
 == Endpoints:
 
 Get Movie
